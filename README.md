@@ -56,6 +56,9 @@ InventoryControlApp é um projeto de API web em .NET 8, projetado para gerenciar
 - **Services**: Serviços de domínio e lógica de negócios.
 - **Repositories**: Abstração de acesso aos dados utilizando Dapper e Dommel.
 - **Models**: Definições de entidades e modelos de dados.
+  
+### Banco de Dados
+[Diagrama do banco de dados](BancoDeDados/README.md)
 
 ## Contribuindo
 
