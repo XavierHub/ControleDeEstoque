@@ -53,7 +53,11 @@ InventoryControlApp é um projeto de API web em .NET 8, projetado para gerenciar
 - **Repository Pattern**: Abstração da lógica de acesso a dados, utilizando Dapper.
 - **Options Pattern**: Padrão para gerenciamento de configurações fortemente tipadas no .NET.
 - **Chain of Responsibility**: Implementado com Middleware do .NET 8 para tratamento de solicitações.
-- **Chain of Responsibility**: Utilizado para separar as operações de leitura e escrita, melhorando a escalabilidade, performance e manutenção do código ao permitir otimizações e alterações independentes.
+- **CQRS**: Utilizado para separar as operações de leitura e escrita, melhorando a escalabilidade, performance e manutenção do código ao permitir otimizações e alterações independentes.
+- **Repository Pattern**: Implementado para abstrair a lógica de acesso a dados e promover um código mais limpo e desacoplado.
+- **Unit of Work**: Utilizado para gerenciar transações e garantir a consistência das operações no banco de dados.
+- **Mediator**: Implementado com o MediatR para centralizar a comunicação entre componentes, promovendo um baixo acoplamento.
+- **Factory Method**: Utilizado implicitamente na criação de instâncias de comandos e handlers pelo MediatR e na configuração de injeção de dependência.
 
 ### Utilização do CQRS no Projeto
 
