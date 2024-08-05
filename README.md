@@ -7,6 +7,9 @@ InventoryControlApp é um projeto de API web em .NET 8, projetado para gerenciar
 ### Casos de Uso
 [Especificação dos casos de uso e Testes](CasosDeUso/README.md)
 
+### Banco de Dados
+[Diagrama do banco de dados](BancoDeDados/README.md)
+
 ## Tecnologias Utilizadas
 
 ### Backend
@@ -48,6 +51,40 @@ InventoryControlApp é um projeto de API web em .NET 8, projetado para gerenciar
 - **Repository Pattern**: Abstração da lógica de acesso a dados, utilizando Dapper.
 - **Options Pattern**: Padrão para gerenciamento de configurações fortemente tipadas no .NET.
 - **Chain of Responsibility**: Implementado com Middleware do .NET 8 para tratamento de solicitações.
+- **Chain of Responsibility**: Utilizado para separar as operações de leitura e escrita, melhorando a escalabilidade, performance e manutenção do código ao permitir otimizações e alterações independentes.
+
+### Utilização do CQRS no Projeto
+
+O CQRS (Command Query Responsibility Segregation) foi utilizado neste projeto para separar as operações de leitura (queries) das operações de escrita (commands), proporcionando diversas vantagens:
+
+1. **Separação de Responsabilidades**:
+   - **Commands**: Responsáveis por operações que alteram o estado do sistema, como criação, atualização e deleção de produtos e consumo de estoque.
+   - **Queries**: Responsáveis por operações de leitura que recuperam dados sem modificar o estado do sistema.
+
+2. **Otimização de Desempenho**:
+   - **Leitura e Escrita Separadas**: Permite otimizar consultas de leitura sem afetar as operações de escrita, possibilitando melhor performance e escalabilidade.
+
+3. **Escalabilidade**:
+   - Permite escalar leituras e escritas de maneira independente, melhorando a capacidade de resposta da aplicação sob alta carga.
+
+4. **Manutenção e Evolução**:
+   - Facilita a manutenção do código, permitindo que alterações em operações de leitura não impactem operações de escrita e vice-versa.
+
+5. **Simplicidade**:
+   - Simplifica a lógica de negócio ao dividir claramente as operações que modificam o estado das operações que apenas leem dados, tornando o código mais fácil de entender e manter.
+
+### Exemplos na Aplicação
+
+- **Commands**: 
+  - `CreateProductCommandHandler`: Trata a criação de novos produtos.
+  - `UpdateProductCommandHandler`: Trata a atualização de produtos existentes.
+  - `StockCommandHandler`: Trata a adição e remoção de itens do estoque.
+
+- **Queries**:
+  - `GetAllProductsHandler`: Recupera todos os produtos.
+  - `GetProductByIdHandler`: Recupera um produto específico por ID.
+  - `GetProductStockQueryHandler`: Recupera a quantidade em estoque de um produto específico.
+  - `GetProductDailyConsumptionQueryHandler`: Recupera o consumo diário de um produto específico.
 
 ## Estrutura do Projeto
 
@@ -59,9 +96,6 @@ InventoryControlApp é um projeto de API web em .NET 8, projetado para gerenciar
 - **Services**: Serviços de domínio e lógica de negócios.
 - **Repositories**: Abstração de acesso aos dados utilizando Dapper e Dommel.
 - **Models**: Definições de entidades e modelos de dados.
-  
-### Banco de Dados
-[Diagrama do banco de dados](BancoDeDados/README.md)
 
 ## Contribuindo
 
