@@ -1,4 +1,8 @@
-### Descrição das Tabelas e Relacionamentos
+### Diagrama Entidade e Relacionamentos
+
+![Screenshots](EntidadeRelacionamento.PNG) <br><br>
+
+### Descrição das Entidades e Relacionamentos
 
 #### Tabela: `Product`
 - **Descrição**: Armazena informações básicas sobre os produtos.
