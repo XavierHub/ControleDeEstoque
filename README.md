@@ -30,7 +30,6 @@ InventoryControlApp é um projeto de API web em .NET 8, projetado para gerenciar
 
 - **xUnit**: Framework de testes para escrita de testes unitários.
 - **Moq**: Biblioteca para criação de objetos mock para testes.
-- **Moq.Dapper**: Biblioteca para mockar métodos de extensão do Dapper.
 
 ### Logging e Monitoramento
 
