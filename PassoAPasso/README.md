@@ -14,7 +14,7 @@ git clone <URL-do-repositório>
 #### Passo 2: Configurar o Banco de Dados
 1. Abra o MySQL Workbench ou outra ferramenta de gerenciamento de banco de dados MySQL.
 2. Crie um novo banco de dados chamado `dbinventory`.
-3. Execute o script SQL localizado em `05 Database/Script/banco.sql` para criar as tabelas necessárias.
+3. Execute o script SQL localizado em `Database/Script/banco.sql` para criar as tabelas necessárias.
    - No MySQL Workbench, isso pode ser feito selecionando o menu `File > Open SQL Script`, navegando até o arquivo `banco.sql` e clicando em `Open`.
    - Execute o script clicando no ícone `Execute` (um raio) ou pressionando `Ctrl+Shift+Enter`.
 
