@@ -4,6 +4,9 @@
 
 InventoryControlApp é um projeto de API web em .NET 8, projetado para gerenciar o estoque de peças. O sistema alerta os usuários sobre estoque insuficiente ou peças inexistentes, impede o consumo excessivo e fornece relatórios diários de consumo com custos associados com base no preço médio de custo.
 
+### Casos de Uso
+[Especificação dos casos de uso e Testes](CasosDeUso/README.md)
+
 ## Tecnologias Utilizadas
 
 ### Backend
